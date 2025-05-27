@@ -1,0 +1,88 @@
+:root{
+      --brand       : #4E79A7;
+      --brand-dark  : #3B5A7A;
+      --bg          : #F9FBFC;
+      --text        : #1F1F1F;
+      --radius      : 12px;
+      --shadow      : 0 4px 14px rgba(0,0,0,.08);
+    }
+    /* ========= 2. Reset mínimo ========= */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font: 400 1rem/1.5 "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display:flex;
+      min-height:100vh;
+      align-items:center;
+      justify-content:center;
+      padding:1.5rem;
+    }
+
+    /* ========= 3. Layout principal ========= */
+    .app{
+      width:100%;
+      max-width:420px;
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:2rem;
+      display:flex;
+      flex-direction:column;
+      gap:1.25rem;
+    }
+    h1{
+      font-size:1.5rem;
+      text-align:center;
+      color:var(--brand);
+    }
+
+    /* ========= 4. Formulário ========= */
+    form{
+      display:flex;
+      gap:.5rem;
+    }
+    input{
+      flex:1;
+      padding:.75rem 1rem;
+      border:2px solid var(--brand);
+      border-radius:var(--radius);
+      font-size:1rem;
+    }
+    button{
+      padding:.75rem 1.25rem;
+      background:var(--brand);
+      color:#fff;
+      border:none;
+      border-radius:var(--radius);
+      cursor:pointer;
+      transition:background .2s;
+    }
+    button:hover{background:var(--brand-dark)}
+
+    /* ========= 5. Cartão de resultado ========= */
+    .card{
+      display:none;              /* aparece só depois do fetch */
+      flex-direction:column;
+      gap:.75rem;
+      text-align:center;
+    }
+    .card img{
+      width:120px;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      border-radius:var(--radius);
+      align-self:center;
+      box-shadow:var(--shadow);
+    }
+    .meta{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.5rem 1rem;
+      font-size:.95rem;
+    }
+    .meta span{font-weight:600}
+    .error{
+      color:#d00;
+      text-align:center;
+    }
