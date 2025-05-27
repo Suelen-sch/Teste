@@ -8,16 +8,28 @@
 
 </head>
 <body>
-    
+    <div class="app">
+    <h1>Country Finder 🌎</h1>
 
+    <form id="searchForm">
+      <input id="codeInput" type="text" placeholder="Digite o código ISO (br, us…)" required>
+      <button type="submit">Buscar</button>
+    </form>
 
+    <p id="status" class="error"></p>
 
+    <div id="resultCard" class="card">
+      <img id="flag" alt="Flag">
+      <h2 id="countryName"></h2>
 
-
-
-
-
-
+      <div class="meta">
+        <span>Capital:</span> <div id="capital"></div>
+        <span>População:</span> <div id="population"></div>
+        <span>Região:</span> <div id="region"></div>
+        <span>Moeda:</span> <div id="currency"></div>
+      </div>
+    </div>
+  </div>
 
     <script src="Script.js"></script>
 </body>
